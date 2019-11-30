@@ -1,0 +1,14 @@
+header {
+  background-color:#244751;
+  color: aliceblue;
+  padding-left: 20px;
+}
+
+.user-info {
+  align-items: center;
+  margin-top: 1em;
+}
+
+.user-info img {
+  border-radius: 50%;
+}
