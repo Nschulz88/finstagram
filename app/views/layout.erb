@@ -9,7 +9,26 @@
 	<title>Finstagram</title>
 </head>
 
-<body>
-  <%= yield %>
-</body>
+  <body>
+    <header>
+        <div class="header-flex">
+            <h1><a href="/">Finstagram</a></h1>
+            <div class="header-button-container">
+                <% if current_user %>
+                    <h3>Hey, <%= current_user.username %> !</h3>
+                    <h3 class="pipe-divider">|</h3>
+                    <h3><a href="/logout">Logout</a></h3>
+                <% else %>
+                    <h3><a href="/login">Login</a></h3>
+                    <h3 class="pipe-divider">|</h3>
+                    <h3><a href="/signup">Signup</a></h3>
+                <% end %>
+
+            </div>
+        </div>
+    </header>
+    <main role="main">
+      <%= yield %>
+    </main>
+  </body>
 </html>
